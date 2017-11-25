@@ -16,28 +16,31 @@
 				<img class="Centered title-image" src="./img/logo_1.png" alt="Hoba logo">
 			</div>
 
+			<hr>
+
 			<div class="text-center" >
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link active" href="index.html">HOME</a>
+							<a class="nav-link active" href="index.html"> Home </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">ABOUT</a>
+							<a class="nav-link" href="#"> About </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">PRODUCT</a>
+							<a class="nav-link" href="#"> Product </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">NEWS</a>
+							<a class="nav-link" href="#"> News </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="./html/contact.html">CONTACTS</a>
+							<a class="nav-link" href="./html/contact.html"> Contacts </a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 
+			<hr class=thin-hr>
 
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -159,4 +162,35 @@
 		<script type="text/javascript" src='./js/jquery-3.2.1.min.js'></script>
 		<!-- <script src="js/bootstrap.min.js"></script> -->
 	</body>
-	<html>
+
+	<style type="text/css">
+	
+	.thin-hr {
+		margin-top: -8px;
+	}
+
+	.nav-link {
+		height: 60px;
+	}
+
+	.nav-item {
+		/*height: 80px;*/
+	}
+
+	.nav-link:hover {
+		background-image: url('./img/triangle.png');
+		background-size: 10px 6px;
+    	background-repeat: no-repeat;
+    	background-position: center bottom;
+	}
+
+	.active {
+		background-image: url('./img/triangle.png');
+		background-size: 10px 6px;
+    	background-repeat: no-repeat;
+    	background-position: center bottom; 	
+	}
+
+	</style>
+
+<html>
