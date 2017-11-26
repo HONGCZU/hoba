@@ -1,0 +1,84 @@
+hr {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	color: #FFFFFF;
+}
+.title-image {
+	width:250px; 
+	height:auto;
+}
+.carousel {
+	margin-top: 2%;
+}
+.navbar {
+	width: 100%;
+	display: inline-block;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+.navbar-nav {
+	/* position: center; */
+	/* text-align: center; */
+}
+.text-center {
+
+}
+.nav-item {
+	margin-right: 60px;
+}
+.home-img {
+	width:auto;
+	height:425px;
+}
+.content-highlight {
+	margin-top: 4%;
+	margin-bottom: 2%;
+	font-size: 64px;
+}
+.content {
+	font-size: 12px;
+	color:#AAAAAA;
+	margin-top: 2%;
+	margin-bottom: 4%;
+}
+.introduction {
+
+}
+.product-image {
+	width: auto;
+	height: 275px;
+	margin: 10px;
+}
+.product-title {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	font-size: 20px;
+	color: #666666;
+}
+.product-introduction {
+	font-size: 16px;
+	color: #AAAAAA;
+	margin-bottom: 20%;
+}
+.email-image {
+	margin-top: 8%;
+	margin-bottom: 0%;
+}
+.email {
+	font-size: 36px;
+	color: #AAAAAA;
+	margin-top: 0%;
+	margin-bottom: 3%;
+}
+.coorperation-link {
+	font-size: 14px;
+	color: #888888;
+	margin-top: 8%;
+	margin-bottom: -1%;
+}
+.privacy-link {
+	font-size: 12px;
+	color: #888888;
+	margin-top: 0%;
+	margin-bottom: 2%;
+}
