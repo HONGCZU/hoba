@@ -32,6 +32,12 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
+	r.GET("/product", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "/html/product.html", gin.H{})
+	})
+	r.GET("/news", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "/html/news.html", gin.H{})
+	})
 	r.GET("/contact", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "/html/contact.html", gin.H{})
 	})
