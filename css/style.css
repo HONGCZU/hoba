@@ -22,10 +22,10 @@
 	/* text-align: center; */
 }
 .active {
-	background-image: url('../img/triangle.png');
-	background-size: 10px 6px;
-	background-repeat: no-repeat;
-	background-position: center bottom; 	
+	/* background-image: url('../img/triangle.png'); */
+	/* background-size: 10px 6px; */
+	/* background-repeat: no-repeat; */
+	/* background-position: center bottom; 	 */
 }
 .text-center {
 
@@ -65,7 +65,7 @@
 }
 .product-image {
 	width: auto;
-	height: 18%;
+	height: 12%;
 	/* margin: 10px; */
 }
 .product-title {
