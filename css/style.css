@@ -3,6 +3,9 @@ hr {
 	margin-bottom: 3rem;
 	color: #FFFFFF;
 }
+.thin-hr {
+	margin-top: -8px;
+}
 .title-image {
 	width:250px; 
 	height:auto;
@@ -13,12 +16,16 @@ hr {
 .navbar {
 	width: 100%;
 	display: inline-block;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
 }
 .navbar-nav {
 	/* position: center; */
 	/* text-align: center; */
+}
+.active {
+	background-image: url('../img/triangle.png');
+	background-size: 10px 6px;
+	background-repeat: no-repeat;
+	background-position: center bottom; 	
 }
 .text-center {
 
@@ -26,6 +33,18 @@ hr {
 .nav-item {
 	margin-right: 60px;
 }
+
+.nav-link {
+	height: 60px;
+}
+
+.nav-link:hover {
+	background-image: url('../img/triangle.png');
+	background-size: 10px 6px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
 .home-img {
 	width:auto;
 	height:425px;
@@ -46,7 +65,7 @@ hr {
 }
 .product-image {
 	width: auto;
-	height: 275px;
+	height: 12%;
 	margin: 10px;
 }
 .product-title {
