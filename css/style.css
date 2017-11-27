@@ -1,4 +1,4 @@
-.hr {
+hr {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	color: #FFFFFF;
@@ -6,8 +6,23 @@
 .thin-hr {
 	margin-top: -8px;
 }
+.side-margin {
+	margin-left: 7%;
+	margin-right: 7%
+}
+.sub-title {
+	margin-top: 3%;
+}
+.gray-bar {
+	margin-bottom: 5%;
+}
+.gray-bar p{
+	background-color:#eeeeee;
+	padding:1.7%;
+	width:100%;
+}
 .title-image {
-	width:250px; 
+	width:20%; 
 	height:auto;
 }
 .carousel {
@@ -15,89 +30,140 @@
 }
 .navbar {
 	width: 100%;
-	display: inline-block;
+	/* display: inline-block; */
+	border:1px solid #eee;
+	border-width:1px 0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	word-spacing: 70px;
 }
-.navbar-nav {
-	/* position: center; */
-	/* text-align: center; */
+.navbar li{
+	display:inline;
+}
+.navbar a{
+	display:inline-block;
+	padding:10px;
+	color: gray;
 }
 .active {
-	/* background-image: url('../img/triangle.png'); */
-	/* background-size: 10px 6px; */
-	/* background-repeat: no-repeat; */
-	/* background-position: center bottom; 	 */
 }
 .text-center {
-
+	margin-top: 7%;
+	margin-bottom: 7%;
 }
-.nav-item {
-	/* margin-right: 60px; */
-}
-
 .nav-link {
-	/* height: 60px; */
+	line-height: 30px;
 }
-
 .nav-link:hover {
 	background-image: url('../img/triangle.png');
 	background-size: 10px 6px;
 	background-repeat: no-repeat;
 	background-position: center bottom;
+	color: black;
 }
-
 .home-img {
-	width:auto;
-	height:425px;
+	width:100%;
+	height:auto;
 }
 .content-highlight {
-	margin-top: 4%;
-	margin-bottom: 2%;
-	font-size: 64px;
+	margin-top: 6%;
+	margin-bottom: 4%;
+	font-size: 60px;
 }
 .content {
 	font-size: 12px;
 	color:#AAAAAA;
 	margin-top: 2%;
-	margin-bottom: 4%;
+	margin-bottom: 10%;
 }
 .introduction {
 
 }
 .product-image {
-	width: auto;
-	height: 12%;
-	/* margin: 10px; */
+	width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 .product-title {
 	margin-top: 10%;
+	margin-bottom: 1%;
+	font-size: 20px;
+	color: #3b3b3b;
+	margin-left: 15%;
+}
+.product-intro {
+	font-size: 12px;
+	color: #7e7e7e;
+	margin-bottom: 20%;
+	margin-left: 15%;
+}
+.EPDM-image {
+	width: 70%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+.EPDM-title {
+	margin-top: 10%;
 	margin-bottom: 10%;
 	font-size: 20px;
-	color: #666666;
+	color: #3b3b3b;
 }
-.product-introduction {
+.EPDM-intro {
 	font-size: 16px;
-	color: #AAAAAA;
+	color: #7e7e7e;
 	margin-bottom: 20%;
+}
+.news-image {
+	box-shadow: 3px 3px 3px #aaa;
+	width:85%;
+	height:auto;
+	margin-bottom:50px;
+}
+.news-title {
+	font-size: 15px;
+	color: #3b3b3b;
+}
+.news-intro {
+	font-size: 13px;
+	color: #7e7e7e;
+}
+.contact-title {
+	font-size: 20px;
+	color: #3b3b3b;
+}
+.contact-intro {
+	font-size: 12px;
+	color: #7e7e7e;
+	line-height: 25px
 }
 .email-image {
 	margin-top: 8%;
 	margin-bottom: 0%;
 }
 .email {
-	font-size: 36px;
-	color: #AAAAAA;
-	margin-top: 0%;
+	font-size: 29px;
+	color: #b0b0b0;
+	margin-top: -6%;
 	margin-bottom: 3%;
 }
 .coorperation-link {
-	font-size: 14px;
-	color: #888888;
-	margin-top: 8%;
-	margin-bottom: -1%;
-}
-.privacy-link {
 	font-size: 12px;
-	color: #888888;
-	margin-top: 0%;
-	margin-bottom: 2%;
+	color: #b0b0b0;
+	line-height: 30px;
 }
+.form {
+	font-size: 12px;
+	color: #7e7e7e;
+}
+.botton {
+	font-size: 12px;
+	color: black;
+	background-color: #FFFFFF;
+	width: 60px;
+	height: 32px;
+}
+

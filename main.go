@@ -48,22 +48,14 @@ func send(c *gin.Context) {
 	phone := c.PostForm("phone")
 	message := c.PostForm("message")
 
-	// mg := mailgun.NewMailgun(domain, apiKey, publicApiKey)
-	// msg := mailgun.NewMessage(
-	//     "jacky.c@17.media",
-	//     "Hoba contact mail",
-	//     fmt.Sprintf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message),
-	//     "jacky.c@17.media",
-	// )
-	// resp, id, err := mg.Send(msg)
-	// if err != nil {
-	//     log.Fatal(err)
-	// }
-	// fmt.Printf("ID: %s Resp: %s\n", id, resp)
+	if name == "" && email == "" && phone == "" && message == "" {
+		c.Redirect(http.StatusMovedPermanently, "/contact")
+		return
+	}
 
 	from := mail.NewEmail("AnAn", "ps10659@gmail.com")
 	subject := "Hoba website's mail from " + name + "(" + email + ")"
-	to := mail.NewEmail("Jacky Chen", "jacky.c@17.media")
+	to := mail.NewEmail("HongCzu", "sales.hongczu@gmail.com")
 	plainTextContent := fmt.Sprintf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
 	htmlContent := "<p>name: " + name + "<br>email: " + email + "<br>phone: " + phone + "<br>message: " + message + "<br></p>"
 	msg := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
@@ -76,38 +68,6 @@ func send(c *gin.Context) {
 		fmt.Println(response.Body)
 		fmt.Println(response.Headers)
 	}
-
-	//     request := sendgrid.GetRequest(os.Getenv(SENDGRID_API_KEY), "/v3/mail/send", "https://api.sendgrid.com")
-	//     request.Method = "POST"
-	//     request.Body = []byte(` {
-	//     "personalizations": [
-	//         {
-	//             "to": [
-	//                 {
-	//                     "email": "ps10659@gmail.com"
-	//                 }
-	//             ],
-	//             "subject": "Hoba website's contact email"
-	//         }
-	//     ],
-	//     "from": {
-	//         "email": "ps10659@gmail.com"
-	//     },
-	//     "content": [
-	//         {
-	//             "type": "text/plain",
-	//             "value": "and easy to do anywhere, even with Go"
-	//         }
-	//     ]
-	// }`)
-	//     response, err := sendgrid.API(request)
-	//     if err != nil {
-	//         log.Println(err)
-	//     } else {
-	//         fmt.Println(response.StatusCode)
-	//         fmt.Println(response.Body)
-	//         fmt.Println(response.Headers)
-	//     }
 
 	fmt.Printf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
 
