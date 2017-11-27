@@ -8,20 +8,12 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	sendgrid "github.com/sendgrid/sendgrid-go"
+	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
 var (
 	port = flag.Int("port", 8080, "port")
-
-	// mailgun
-	domain       = "mail.17.media"
-	apiKey       = "key-346baf7676f148c9ba82d23789a4b0ef"
-	publicApiKey = "pubkey-d42e7b0190cc57d61bee2b931e936715"
-
-	// sendgrid
-	sendgridApiKey = "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"
 )
 
 func main() {
@@ -69,12 +61,13 @@ func send(c *gin.Context) {
 	// }
 	// fmt.Printf("ID: %s Resp: %s\n", id, resp)
 
-	from := mail.NewEmail("Jacky Chen", "ps10659@gmail.com")
-	subject := "Hoba website's contact mail"
-	to := mail.NewEmail("Jacky Chen", "ps10659@gmail.com")
+	from := mail.NewEmail("AnAn", "ps10659@gmail.com")
+	subject := "Hoba website's mail from " + name + "(" + email + ")"
+	to := mail.NewEmail("Jacky Chen", "jacky.c@17.media")
 	plainTextContent := fmt.Sprintf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
-	msg := mail.NewSingleEmail(from, subject, to, plainTextContent, "")
-	client := sendgrid.NewSendClient(os.Getenv(sendgridApiKey))
+	htmlContent := "<p>name: " + name + "<br>email: " + email + "<br>phone: " + phone + "<br>message: " + message + "<br></p>"
+	msg := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
+	client := sendgrid.NewSendClient(os.Getenv("SENDGRID_API_KEY"))
 	response, err := client.Send(msg)
 	if err != nil {
 		log.Println(err)
@@ -83,6 +76,38 @@ func send(c *gin.Context) {
 		fmt.Println(response.Body)
 		fmt.Println(response.Headers)
 	}
+
+	//     request := sendgrid.GetRequest(os.Getenv(SENDGRID_API_KEY), "/v3/mail/send", "https://api.sendgrid.com")
+	//     request.Method = "POST"
+	//     request.Body = []byte(` {
+	//     "personalizations": [
+	//         {
+	//             "to": [
+	//                 {
+	//                     "email": "ps10659@gmail.com"
+	//                 }
+	//             ],
+	//             "subject": "Hoba website's contact email"
+	//         }
+	//     ],
+	//     "from": {
+	//         "email": "ps10659@gmail.com"
+	//     },
+	//     "content": [
+	//         {
+	//             "type": "text/plain",
+	//             "value": "and easy to do anywhere, even with Go"
+	//         }
+	//     ]
+	// }`)
+	//     response, err := sendgrid.API(request)
+	//     if err != nil {
+	//         log.Println(err)
+	//     } else {
+	//         fmt.Println(response.StatusCode)
+	//         fmt.Println(response.Body)
+	//         fmt.Println(response.Headers)
+	//     }
 
 	fmt.Printf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
 
