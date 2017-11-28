@@ -15,6 +15,7 @@ hr {
 	font-size: 20px;
 	color: #3b3b3b;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 3px;
 }
 .gray-bar {
 	margin-bottom: 5%;
@@ -61,6 +62,7 @@ hr {
 .nav-link {
 	line-height: 60px;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 2px;
 }
 .nav-link:hover {
 	background-image: url('../img/triangle.png');
@@ -78,6 +80,7 @@ hr {
 	margin-bottom: 4%;
 	font-size: 60px;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 8px;
 }
 .content {
 	font-size: 12px;
@@ -85,6 +88,7 @@ hr {
 	margin-top: 2%;
 	margin-bottom: 10%;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 2px;
 }
 .introduction {
 
@@ -102,6 +106,7 @@ hr {
 	color: #3b3b3b;
 	margin-left: 15%;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 3px;
 }
 .product-intro {
 	font-size: 12px;
@@ -109,6 +114,7 @@ hr {
 	margin-bottom: 20%;
 	margin-left: 15%;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0.5px;
 }
 .EPDM-image {
 	width: 70%;
@@ -122,12 +128,14 @@ hr {
 	font-size: 20px;
 	color: #3b3b3b;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 3px;
 }
 .EPDM-intro {
 	font-size: 16px;
 	color: #7e7e7e;
 	margin-bottom: 20%;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0.5px;
 }
 .news-image {
 	box-shadow: 3px 3px 3px #aaa;
@@ -140,22 +148,26 @@ hr {
 	font-size: 18px;
 	color: #3b3b3b;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 3px;
 }
 .news-intro {
 	font-size: 16px;
 	color: #7e7e7e;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0.5px;
 }
 .contact-title {
 	font-size: 20px;
 	color: #3b3b3b;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 3px;
 }
 .contact-intro {
 	font-size: 12px;
 	color: #7e7e7e;
 	line-height: 25px;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 0.5px;
 }
 .email-image {
 	margin-top: 8%;
@@ -167,12 +179,14 @@ hr {
 	margin-top: -6%;
 	margin-bottom: 3%;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 4px;
 }
 .coorperation-link {
 	font-size: 12px;
 	color: #b0b0b0;
 	line-height: 30px;
 	font-family: 'PT Sans', sans-serif;
+	letter-spacing: 1.5px;
 }
 .form {
 	font-size: 12px;
