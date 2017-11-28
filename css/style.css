@@ -124,13 +124,14 @@ hr {
 	width:50%;
 	height:auto;
 	margin-bottom:50px;
+	float: right;
 }
 .news-title {
-	font-size: 15px;
+	font-size: 18px;
 	color: #3b3b3b;
 }
 .news-intro {
-	font-size: 13px;
+	font-size: 16px;
 	color: #7e7e7e;
 }
 .contact-title {
