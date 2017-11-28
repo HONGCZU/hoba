@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sendgrid/sendgrid-go"
@@ -53,11 +54,28 @@ func send(c *gin.Context) {
 		return
 	}
 
+	// write email into local log file
+	f, err := os.OpenFile("email.log", os.O_APPEND|os.O_WRONLY, 0600)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	location, _ := time.LoadLocation("Asia/Taipei")
+	now := time.Now().In(location).Format("Mon Jan 02 15:04:05 -0700 2006")
+	content := fmt.Sprintf("time: %s\nname: %s\nemail: %s\nphone: %s\nmessage: %s\n\n", now, name, email, phone, message)
+	fmt.Println(content)
+
+	if _, err = f.WriteString(content); err != nil {
+		panic(err)
+	}
+
+	// send email by sendgrid
 	from := mail.NewEmail("AnAn", "ps10659@gmail.com")
 	subject := "Hoba website's mail from " + name + "(" + email + ")"
 	to := mail.NewEmail("HongCzu", "sales.hongczu@gmail.com")
-	plainTextContent := fmt.Sprintf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
-	htmlContent := "<p>name: " + name + "<br>email: " + email + "<br>phone: " + phone + "<br>message: " + message + "<br></p>"
+	plainTextContent := content
+	htmlContent := "<p>time: " + now + "<br>name: " + name + "<br>email: " + email + "<br>phone: " + phone + "<br>message: " + message + "<br></p>"
 	msg := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
 	client := sendgrid.NewSendClient(os.Getenv("SENDGRID_API_KEY"))
 	response, err := client.Send(msg)
@@ -68,8 +86,6 @@ func send(c *gin.Context) {
 		fmt.Println(response.Body)
 		fmt.Println(response.Headers)
 	}
-
-	fmt.Printf("name: \n\t%s\nemail: \n\t%s\nphone: \n\t%s\nmessage: \n\t%s\n", name, email, phone, message)
 
 	c.Redirect(http.StatusMovedPermanently, "/contact")
 	return
