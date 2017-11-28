@@ -57,6 +57,7 @@ hr {
 }
 .nav-link {
 	line-height: 60px;
+	font-family: 'PT Sans', sans-serif;
 }
 .nav-link:hover {
 	background-image: url('../img/triangle.png');
@@ -73,12 +74,14 @@ hr {
 	margin-top: 6%;
 	margin-bottom: 4%;
 	font-size: 60px;
+	font-family: 'PT Sans', sans-serif;
 }
 .content {
 	font-size: 12px;
 	color:#AAAAAA;
 	margin-top: 2%;
 	margin-bottom: 10%;
+	font-family: 'PT Sans', sans-serif;
 }
 .introduction {
 
@@ -95,12 +98,14 @@ hr {
 	font-size: 20px;
 	color: #3b3b3b;
 	margin-left: 15%;
+	font-family: 'PT Sans', sans-serif;
 }
 .product-intro {
 	font-size: 12px;
 	color: #7e7e7e;
 	margin-bottom: 20%;
 	margin-left: 15%;
+	font-family: 'PT Sans', sans-serif;
 }
 .EPDM-image {
 	width: 70%;
@@ -113,11 +118,13 @@ hr {
 	margin-bottom: 10%;
 	font-size: 20px;
 	color: #3b3b3b;
+	font-family: 'PT Sans', sans-serif;
 }
 .EPDM-intro {
 	font-size: 16px;
 	color: #7e7e7e;
 	margin-bottom: 20%;
+	font-family: 'PT Sans', sans-serif;
 }
 .news-image {
 	box-shadow: 3px 3px 3px #aaa;
@@ -129,19 +136,23 @@ hr {
 .news-title {
 	font-size: 18px;
 	color: #3b3b3b;
+	font-family: 'PT Sans', sans-serif;
 }
 .news-intro {
 	font-size: 16px;
 	color: #7e7e7e;
+	font-family: 'PT Sans', sans-serif;
 }
 .contact-title {
 	font-size: 20px;
 	color: #3b3b3b;
+	font-family: 'PT Sans', sans-serif;
 }
 .contact-intro {
 	font-size: 12px;
 	color: #7e7e7e;
-	line-height: 25px
+	line-height: 25px;
+	font-family: 'PT Sans', sans-serif;
 }
 .email-image {
 	margin-top: 8%;
@@ -152,15 +163,18 @@ hr {
 	color: #b0b0b0;
 	margin-top: -6%;
 	margin-bottom: 3%;
+	font-family: 'PT Sans', sans-serif;
 }
 .coorperation-link {
 	font-size: 12px;
 	color: #b0b0b0;
 	line-height: 30px;
+	font-family: 'PT Sans', sans-serif;
 }
 .form {
 	font-size: 12px;
 	color: #7e7e7e;
+	font-family: 'PT Sans', sans-serif;
 }
 .botton {
 	font-size: 12px;
@@ -168,5 +182,6 @@ hr {
 	background-color: #FFFFFF;
 	width: 60px;
 	height: 32px;
+	font-family: 'PT Sans', sans-serif;
 }
 
