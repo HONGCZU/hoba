@@ -27,15 +27,19 @@ func main() {
 	r.Static("/js", "./js")
 
 	r.GET("/", func(c *gin.Context) {
+		oplog(c, "home")
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
 	r.GET("/product", func(c *gin.Context) {
+		oplog(c, "product")
 		c.HTML(http.StatusOK, "product.html", gin.H{})
 	})
 	r.GET("/news", func(c *gin.Context) {
+		oplog(c, "news")
 		c.HTML(http.StatusOK, "news.html", gin.H{})
 	})
 	r.GET("/contact", func(c *gin.Context) {
+		oplog(c, "contact")
 		c.HTML(http.StatusOK, "contact.html", gin.H{})
 	})
 	r.POST("/send", send)
@@ -87,6 +91,20 @@ func send(c *gin.Context) {
 		fmt.Println(response.Headers)
 	}
 
+	oplog(c, "send")
 	c.Redirect(http.StatusMovedPermanently, "/contact")
 	return
+}
+
+func oplog(c *gin.Context, op string) {
+	f, err := os.OpenFile("op.log", os.O_APPEND|os.O_WRONLY, 0600)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	content := fmt.Sprintf("%d, %s\n", time.Now().Unix(), op)
+	if _, err = f.WriteString(content); err != nil {
+		panic(err)
+	}
 }
