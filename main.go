@@ -20,7 +20,14 @@ var (
 func main() {
 	flag.Parse()
 	r := gin.Default()
-	r.LoadHTMLFiles("index.html", "html/product.html", "html/news.html", "html/contact.html")
+	r.LoadHTMLFiles(
+		"index.html",
+		"html/product_boot.html",
+		"html/product_cup.html",
+		"html/product_seal.html",
+		"html/news.html",
+		"html/contact.html",
+	)
 	r.Static("/html", "./html")
 	r.Static("/img", "./img")
 	r.Static("/css", "./css")
@@ -30,9 +37,17 @@ func main() {
 		oplog(c, "home")
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
-	r.GET("/product", func(c *gin.Context) {
-		oplog(c, "product")
-		c.HTML(http.StatusOK, "product.html", gin.H{})
+	r.GET("/product/boot", func(c *gin.Context) {
+		oplog(c, "product_boot")
+		c.HTML(http.StatusOK, "product_boot.html", gin.H{})
+	})
+	r.GET("/product/cup", func(c *gin.Context) {
+		oplog(c, "product_cup")
+		c.HTML(http.StatusOK, "product_cup.html", gin.H{})
+	})
+	r.GET("/product/seal", func(c *gin.Context) {
+		oplog(c, "product_seal")
+		c.HTML(http.StatusOK, "product_seal.html", gin.H{})
 	})
 	r.GET("/news", func(c *gin.Context) {
 		oplog(c, "news")
