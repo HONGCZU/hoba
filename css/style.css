@@ -158,7 +158,19 @@ hr {
 	height: auto;
 	display: block;
 	margin: 0 auto;
+	/* border-radius: 50%; */
 }
+/* .product-image:hover */
+/* { */
+/*     -moz-box-shadow: 0 0 10px #ccc; <] */
+/*     -webkit-box-shadow: 0 0 10px #ccc; */
+/*     box-shadow: 0 0 10px #ccc; */
+/* } */
+
+.swap-img img:last-child{display:none}
+.swap-img:hover img:first-child{display:none}
+.swap-img:hover img:last-child{display:inline-block}
+
 .product-title {
 	margin-top: 10%;
 	margin-bottom: 1%;
