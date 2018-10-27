@@ -29,7 +29,11 @@ func main() {
 		"html/contact.html",
 	)
 	r.Static("/html", "./html")
-	r.Static("/img", "./img")
+	r.Static("/img/icon", "./img/icon")
+	r.Static("/img/logo", "./img/logo")
+	r.Static("/img/home", "./img/home")
+	r.Static("/img/news", "./img/news")
+	r.Static("/img/product", "./img/product")
 	r.Static("/css", "./css")
 	r.Static("/js", "./js")
 
