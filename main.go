@@ -21,7 +21,7 @@ func main() {
 	flag.Parse()
 	r := gin.Default()
 	r.LoadHTMLFiles(
-		"index.html",
+		"html/index.html",
 		"html/product_boot.html",
 		"html/product_cup.html",
 		"html/product_seal.html",
@@ -78,7 +78,7 @@ func send(c *gin.Context) {
 	}
 
 	// write email into local log file
-	f, err := os.OpenFile("email.log", os.O_APPEND|os.O_WRONLY, 0600)
+	f, err := os.OpenFile("log/email.log", os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		panic(err)
 	}
@@ -116,7 +116,7 @@ func send(c *gin.Context) {
 }
 
 func oplog(c *gin.Context, op string) {
-	f, err := os.OpenFile("op.log", os.O_APPEND|os.O_WRONLY, 0600)
+	f, err := os.OpenFile("log/op.log", os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		panic(err)
 	}
