@@ -34,6 +34,7 @@ func main() {
 	r.Static("/img/home", "./img/home")
 	r.Static("/img/news", "./img/news")
 	r.Static("/img/product", "./img/product")
+	r.Static("/img/section", "./img/section")
 	r.Static("/css", "./css")
 	r.Static("/js", "./js")
 

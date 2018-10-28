@@ -10,6 +10,14 @@ hr {
 	margin-left: 7%;
 	margin-right: 7%;
 }
+
+.section-view {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
 .sub-title {
 	margin-top: 3%;
 	font-size: 20px;
@@ -154,17 +162,17 @@ hr {
 
 }
 .product-image {
-	width: 250px;
-	height: 200px;
+	width: 80%;
+	height: auto;
 	display: block;
 	/* margin: 0 auto; */
-	border-radius: 100%;
+	/* border-radius: 100%; */
 	/* -moz-box-shadow: 0 0 10px #ccc; */
 	/* -webkit-box-shadow: 0 0 10px #ccc; */
 	/* box-shadow: 0 0 10px #ccc; */
-	filter:contrast(120%) brightness(120%);
-	position: relative;
-	left: 23%;
+	/* filter:contrast(120%) brightness(120%); */
+	/* position: relative; */
+	/* left: 0%; */
 	/* margin-left: auto; */
     /* margin-right: auto; */
 }
@@ -284,3 +292,42 @@ hr {
 	font-family: 'PT Sans', sans-serif;
 }
 
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.table-scroll {
+	overflow-y:auto;
+	height:350px;
+	margin-left:10%;
+	margin-right:10%;
+}
+
+.table-no-scroll {
+	margin-left:10%;
+	margin-right:10%;
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+	text-align:center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+table#myTable th:nth-child(6) {
+	display: none;
+}
+
+table#myTable td:nth-child(6) {
+	display: none;
+}
