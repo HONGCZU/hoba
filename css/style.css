@@ -331,3 +331,11 @@ table#myTable th:nth-child(6) {
 table#myTable td:nth-child(6) {
 	display: none;
 }
+
+table#cupTable th:nth-child(4), th:nth-child(6) {
+	display: none;
+}
+
+table#cupTable td:nth-child(4), td:nth-child(6) {
+	display: none;
+}
